@@ -23,7 +23,7 @@
                 >
               </li>
               <li class="nav-item">
-                <RouterLink class="nav-link" to="/admin/reservation">Student Resrevation</RouterLink>
+                <RouterLink class="nav-link" to="/admin/reservation">Student Reservation</RouterLink>
               </li>
               <li class="nav-item">
                 <RouterLink class="nav-link" to="/admin/history">History</RouterLink>
@@ -109,6 +109,7 @@ export default {
   methods: {
     logout() {
       localStorage.removeItem('token'); // Clear token from local storage
+      alert('Logout Successfully');
       this.$router.push('/admin'); // Redirect to the login page
     }
   }

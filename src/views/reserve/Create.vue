@@ -138,6 +138,7 @@ export default {
 
      logout() {
       localStorage.removeItem('token'); // Clear token from local storage
+      alert('Logout Successfully');
       this.$router.push('/'); // Redirect to the login page
     },
   },

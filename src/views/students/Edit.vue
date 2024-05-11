@@ -137,7 +137,8 @@ export default {
   },
   methods: {
     logout() {
-      localStorage.removeItem('token'); // Clear token from local storage
+      localStorage.removeItem('token'); // Clear token from local storage\
+      alert('Logout Successfully');
       this.$router.push('/admin'); // Redirect to the login page
     },
     getStudentData(studentId) {
