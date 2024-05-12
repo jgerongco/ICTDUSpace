@@ -5,74 +5,57 @@
         <h4>Reservation</h4>
       </div>
       <div class="card-body">
-        <ul
-          class="alert alert-warning"
-          v-if="Object.keys(this.errorList).length > 0"
-        >
+        <!-- Error messages display -->
+        <ul class="alert alert-warning" v-if="Object.keys(this.errorList).length > 0">
           <li class="mb-0 ms-3" v-for="error in errorList" :key="error">
             {{ error[0] }}
           </li>
         </ul>
+        <!-- Form fields -->
         <div class="row">
+          <!-- Form inputs -->
+          <!-- Firstname -->
           <div class="col-12 mb-3">
             <label for="">Firstname</label>
-            <input
-              type="text"
-              class="form-control"
-              v-model="model.res.firstname"
-            />
+            <input type="text" class="form-control" v-model="model.res.firstname" />
           </div>
+          <!-- Lastname -->
           <div class="col-12 mb-3">
             <label for="">Lastname</label>
-            <input
-              type="text"
-              class="form-control"
-              v-model="model.res.lastname"
-            />
+            <input type="text" class="form-control" v-model="model.res.lastname" />
           </div>
+          <!-- Email -->
           <div class="col-12 mb-3">
             <label for="">Email</label>
-            <input
-              type="email"
-              class="form-control"
-              v-model="model.res.email"
-            />
+            <input type="email" class="form-control" v-model="model.res.email" />
           </div>
+          <!-- Faculty -->
           <div class="col-12 mb-3">
             <label for="">Faculty</label>
-            <input
-              type="text"
-              class="form-control"
-              v-model="model.res.faculty"
-            />
+            <input type="text" class="form-control" v-model="model.res.faculty" />
           </div>
+          <!-- People -->
           <div class="col-12 mb-3">
             <label for="">People</label>
-            <input
-              type="text"
-              class="form-control"
-              v-model="model.res.people"
-            />
+            <input type="text" class="form-control" v-model="model.res.people" />
           </div>
+          <!-- Date -->
           <div class="col-12 mb-3">
             <label for="">Date</label>
-            <input
-              type="date"
-              class="form-control"
-              v-model="model.res.date"
-            />
+            <input type="date" class="form-control" v-model="model.res.date" />
           </div>
+          <!-- Purpose -->
           <div class="col-12 mb-3">
             <label for="">Purpose</label>
-            <input
-              type="text"
-              class="form-control"
-              v-model="model.res.purpose"
-            />
+            <input type="text" class="form-control" v-model="model.res.purpose" />
           </div>
-          <div class="col-12 mb-3 text-end">
-            <button type="button" @click="saveStudent" class="btn btn-success">
+          <!-- Buttons -->
+          <div class="col-12 mb-2 text-end">
+            <button type="button" @click="saveStudent" class="btn btn-margin">
               Save
+            </button>
+            <button type="button" @click="Cancel" class="btn btn-margin">
+              Cancel
             </button>
           </div>
         </div>
@@ -95,15 +78,14 @@ export default {
           lastname: "",
           email: "",
           faculty: "",
-          people:"",
+          people: "",
           date: "",
           purpose: "",
         },
       },
     };
   },
-
-  methods:{
+  methods: {
     saveStudent() {
       var mythis = this;
       axios
@@ -117,7 +99,7 @@ export default {
             lastname: "",
             email: "",
             faculty: "",
-            people:"",  
+            people: "",
             date: "",
             purpose: "",
           };
@@ -135,13 +117,20 @@ export default {
           }
         });
     },
-
-     logout() {
-      localStorage.removeItem('token'); // Clear token from local storage
-      alert('Logout Successfully');
-      this.$router.push('/'); // Redirect to the login page
+    Cancel() {
+      this.$router.push("/reservation"); // Redirect to the reservation page
+    },
+    logout() {
+      localStorage.removeItem("token"); // Clear token from local storage
+      alert("Logout Successfully");
+      this.$router.push("/"); // Redirect to the login page
     },
   },
-  
 };
 </script>
+
+<style>
+.btn-margin {
+  margin-right: 10px; /* Adjust as needed */
+}
+</style>

@@ -41,7 +41,7 @@
       <div class="card-header">
         <h4>
           Reservation
-          <router-link to="/reservation/create" class="btn btn-success float-end"
+          <router-link to="/reservation/create" class="btn  float-end"
             >Add Reservation</router-link
           >
         </h4>
@@ -128,5 +128,16 @@ export default {
 </script>
 
 <style>
+.btn {
+  background-color: #e62b4d; 
+  color: white; 
+  border-color: #e62b4d /* Border color */
+}
 
+/* Example: */
+.btn:hover {
+  background-color: #F68B9E;
+  color: white; 
+  border-color: #F68B9E;
+}
 </style>

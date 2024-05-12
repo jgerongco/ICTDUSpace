@@ -67,8 +67,8 @@ export default {
 };
 </script>
 
-<!-- <style scope>
-.background {
+<style scope>
+body {
   background-image: url('src/NIY_03551.jpg');
   background-size: cover;
   background-position: center;
@@ -76,4 +76,5 @@ export default {
   margin: 0;
   padding: 0;/* Adjust the height as needed */
 }
-</ -->
+
+</style>

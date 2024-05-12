@@ -12,12 +12,5 @@ import Nav from "../components/Navbar.vue";
 </template>
 
 <style scoped>
-.home-container {
-  background-image: url('src/NIY_03551.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  /* Additional styling if needed */
-  min-height: 100vh; /* Ensure the background covers the entire viewport */
-}
+
 </style>
