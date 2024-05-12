@@ -69,7 +69,7 @@ export default {
 
 <style scope>
 body {
-  background-image: url('src/NIY_03551.jpg');
+  background-image: url('./NIY_03551.jpg');
   background-size: cover;
   background-position: center;
   height: 100vh;
