@@ -1,4 +1,5 @@
 <template>
+  
 <header>
     <div class="wrapper">
       <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -51,6 +52,7 @@
     <h1>
     Home
     </h1>
+
 </template>
 
 <script>
@@ -65,5 +67,13 @@ export default {
 };
 </script>
 
-
-
+<!-- <style scope>
+.background {
+  background-image: url('src/NIY_03551.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;/* Adjust the height as needed */
+}
+</ -->
